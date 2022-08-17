@@ -1,0 +1,498 @@
+*{
+  margin: 0;
+  size: cover;
+  font-family: arial;
+}
+body{
+}
+small{
+  box-sizing: border-box;
+  margin: 25px;
+  padding-bottom: 20px;
+}
+.sep{
+  box-sizing: border-box;
+  width: 100%;
+  height: 10px;
+  background-color: #FAFAFA;
+}
+.head{
+    background-color: #0B6121;
+}
+#head img{
+    background-color: #088A29;
+    width: 25px;
+    height: 25px;
+}
+#head button{
+  background-color: #088A29;
+  border: none;
+  border-color: #088A29;
+  border-style: none;
+}
+#head ul {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: none;
+  background-color: #088A29;
+}
+
+#head li {
+  display: inline-block;
+}
+#head li input{
+  float: left;
+}
+
+#head li a {
+
+  background-color: #088A29;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+#head li input {
+  background-color: white;
+  text-align: left;
+  border-radius: 10px;
+  margin: 6px;
+  border: 0;
+  padding: 11px;
+  text-decoration: none;
+  text-decoration-color: none;
+  max-width: 150px;
+  height: 100%;
+  outline-style: none;
+}
+
+#head li a:hover:not(.active) {
+  background-color: #0B3B17;
+}
+
+
+.caixadebusca{
+  background-color: white;
+}
+
+.search{
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+}
+
+.hide{
+  visibility: hidden;
+}
+
+.lembrou{
+  color: white;
+  margin: auto;
+  padding: 8px;
+  padding-left: 15px;
+  font-size: 170%;
+  font-family: arial;
+}
+
+.lembretes{
+  padding: 5px;
+}
+
+.lembretes select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 25px;
+  background-color: transparent;
+  border-color: #00cc88;
+  border-radius: 10px;
+  outline-style: none;
+  margin-top: 10px;
+}
+
+.titulolembrete{
+  background-color: rgba(166, 255, 77, 80%);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0px 0px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+
+
+
+
+.save{
+  color: white;
+  background-color: #088A29;
+  border: none;
+  outline-style: none;
+  padding: 10px;
+  width: 100%;
+}
+
+
+
+.active {
+  background-color: #4CAF50;
+}
+
+.dropbtn {
+  background-color: #00cc88;
+  color: white;
+  font: white;
+  border: none;
+  cursor: pointer;
+  float: right;
+  padding: 12px;
+  padding-top: 15px;
+}
+
+.esconde{
+  display: none ;
+}
+.card{
+  background-color: rgba(255,255,224, 0.8);
+}
+.lembretes{
+  margin-right: 2,5%;
+  margin-left: 2,5%;
+  margin-top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.lembrete{
+  margin-bottom: 5%;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+.lembrete b{
+  margin-left: 5px;
+}
+.titulolembrete{
+  margin: auto;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 110%;
+  padding: 8px;
+  text-transform: uppercase;
+  color: black;
+  border-radius: 7px 7px 0px 0px;
+}
+.titulolembrete img{
+  box-sizing: border-box;
+  vertical-align: middle;
+  height: 15px;
+  margin-top: 4px;
+  padding-left: 2px;
+  float: left;
+}
+
+.anotacao{
+  background-color: #FAFAFA;
+  border-radius: 7px;
+  padding-bottom: 5px;
+}
+.anotacao p{
+  width: 100%;
+  border: none;
+  padding: 15px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  color: black;
+  resize: none;
+}
+.anotacao footer{
+  padding: 15px;
+}
+
+
+.menuexed img{
+  height: 20px;
+  margin-top: 2px;
+}
+.menuseta img{
+  transition: 0.5s;
+}
+
+.menuexed {
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+
+.menulembrete{
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+.menulembrete img{
+  height: 20px;
+  margin-top: 2px;
+}
+
+
+
+/*tela novo lembretes*/
+
+.novolembrete {
+  border-radius: 5%;
+  margin: 5%;
+  width: 90%;
+  height: 100%;
+}
+.titulo{
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: 2px solid #aaa;
+  width: 100%;
+  border-radius: 5px;
+  padding: 2%;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+  border-color: #00cc88;
+}
+.observacao{
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #aaa;
+  width: 100%;
+  border-radius: 5px;
+  padding: 3%;
+  margin-bottom: 5%;
+  transition-duration: .30s;
+}
+.observacaoedit{
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  width: 75%;
+  border-radius: 5px;
+  padding: 3%;
+  margin-bottom: 5%;
+  transition-duration: .30s;
+}
+.menucor{
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #aaa;
+  width: 100%;
+  border-radius: 5px;
+  padding: 3%;
+  margin-bottom: 5%;
+  background-color: white;
+  transition-duration: .30s;
+}
+
+/* novo lembrete */
+
+.novolembrete select:focus{
+  border-color: #00cc88;
+  box-shadow: 0 0 2px 0 #00cc88;
+}
+
+.novolembrete input[type=text]:focus{
+  border-color: #00cc88;
+  box-shadow: 0 0 2px 0 #00cc88;
+}
+
+
+.novolembrete textarea{
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5%;
+  resize: none;
+  height: 300px;
+  transition-duration: .30s;
+}
+.novolembrete textarea:focus{
+  border-color: #00cc88;
+  box-shadow: 0 0 2px 0 #00cc88;
+}
+.lembretescorpo{
+  display: block;
+}
+
+.lixeira{
+  box-sizing: border-box;
+}
+
+.edit{
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.editar{
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.paginaeditar{
+  position: fixed;
+  top: 0px;
+  padding-top: 10%;
+  padding-right: 4%;
+  padding-left: 4%;
+  background:rgba(28,28,28, 80%);
+  height: 100%; 
+  width: 100%;
+  display: none;
+}
+.confirmaexclui{
+  background:rgba(28,28,28, 80%);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+}
+.confirmexclui{
+  position: fixed;
+  width: 85%;
+  height: auto;
+  margin: auto;
+  top: 75%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.fix{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.descartar {
+  position: fixed;
+  bottom: 0;
+  width: 92%;
+  padding-bottom: 4%;
+
+}
+.paginaeditar textarea{
+  border: none;
+}
+.paginaeditar input{
+  border: none;
+}
+.textareaedit{
+  padding: 3%;
+  width: 100%;
+  height: 150px;
+  max-height: 70%;
+  resize: none;
+}
+.titedit{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.001);
+}
+
+
+.footersave{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  float: left;
+  box-sizing: border-box;
+}
+.footersave ul{
+  list-style: none;
+  width: 100%;
+  margin: 0;
+}
+
+.footer{
+  float: right;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.footeradd{
+  height: 10%;
+  width: 10%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.footer ul{
+  list-style: none;
+}
+
+.add{
+  background-color: #088A29;
+  border-radius: 100%;
+  padding: 5px 5px;
+  border: 0px;
+  outline-style: none;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 7px;
+
+  box-shadow: 1px 3px 10px 1px rgb(192,192,192);
+}
+
+.addalign{
+  float: right;
+}
+.footer img{
+  vertical-align: middle;
+  box-sizing: border-box;
+  border-radius: 100%;
+
+}
+
+
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  background-color: #00cc88;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #333}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #333;
+}

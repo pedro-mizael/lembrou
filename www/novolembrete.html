@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adicionar lembrete</title>
+	<meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' ; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/my.css">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/my.js"></script>
+        <script type="text/javascript" src="services/services.js"></script>
+</head>
+<body onload="">
+
+  <!-- Campo para adição de novos lembretes !-->
+
+    <div class="novolembrete">
+          <input type="text" placeholder="TITULO" id="tit" class="titulo" maxlength="18" ></input><br>
+          <textarea placeholder="Lembrete" id="lemb"></textarea><br>
+          <input type="text" class="observacao" placeholder="Obs" id="obs" maxlength="30" ></input>
+          <select class="menucor" id="cor">
+              <option value="border-light">Sem Cor</option>
+              <option value="border-info">Azul</option>
+              <option value="border-success">Verde</option>
+              <option value="border-warning">Amarelo</option>
+              <option value="border-danger">Vermelho</option>
+              <option value="border-dark">Preto</option>
+          </select>
+    </div>
+    	  <!-- Footer do app !-->
+
+    <div class="footersave">
+    	    
+    	<button class="save" onclick="salvar(tit, lemb, obs, cor)"><b>SALVAR</b></button>
+    	     
+    </div>
+
+</body>
+</html>

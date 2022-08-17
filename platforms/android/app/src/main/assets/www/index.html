@@ -1,0 +1,161 @@
+<!DOCTYPE html5>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'default-src'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/my.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <title>Home</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/my.js" defer></script>
+        <script type="text/javascript" src="services/services.js"></script>
+    </head>
+    <body onload="carregar()">
+
+    <!-- Barra de cima do app -->
+      <div class="lembretescorpo">
+        <div class="head" id="head">
+          <ul>
+            <li id="lembrou"><h2 class="lembrou">Lembrou?</h2></li>
+      
+            
+            <!-- Ícone de pesquisa -->
+
+              <li onclick="pesquisar(buscar, lembrou), focar(buscar)" class="search"><img src="img/svg/iconfinder-icon.svg"></li>
+
+            <!---------------------->
+
+            <!-- Campo de pesquisa -->
+
+              <li class="" ><input oninput="carregar()" class="esconde" class="caixadebusca" type="text" id="buscar" placeholder="Buscar por..." name=""></li>
+
+            <!----------------------->
+
+          </ul>
+        </div>
+
+    <!------------------------->
+      
+          <div class="lembretes">
+            <select style="" name="cor" id="filtrocor" onchange="carregar()">
+                <option value="">Todos</option>
+                <option value="border-light">Sem Cor</option>
+                <option value="border-info">Azul</option>
+                <option value="border-success">Verde</option>
+                <option value="border-warning">Amarelo</option>
+                <option value="border-danger">Vermelho</option>
+                <option value="border-dark">Preto</option>
+            </select>
+            <br><br>
+            <div id="listalembretes">
+            
+          </div>
+        </div>
+
+
+        <!-- Janela de edição de lembretes !-->
+
+        <div id="sobrepor" name="sobrepor" class="paginaeditar" >
+          
+            <div class="card  mb-3">
+              <div class="card-header">
+                <input id="titulo" class="titedit" type="text" name="" maxlength="18" style="text-transform: uppercase;">
+              </div>
+              <div class="card-body">
+                <textarea id="anotacao" class="textareaedit">
+                
+                <!-- Area do conteudo a ser editado !--> 
+                  
+                </textarea>
+              </div>
+              <footer class="blockquote-footer ">
+                <cite id="obsedit" class="">
+                  <input id="observacao" class="observacaoedit" type="text" name="" maxlength="30"> 
+                </cite>
+
+              </footer>
+            </div>
+          <div id="cores">
+            <select class="menucor" id="cor">
+              <option value="border-light">Sem Cor</option>
+              <option value="border-info">Azul</option>
+              <option value="border-success">Verde</option>
+              <option value="border-warning">Amarelo</option>
+              <option value="border-danger">Vermelho</option>
+              <option value="border-dark">Preto</option>
+            </select>            
+          </div><br>
+     
+           <div class="btn btn-group btn-block" id="confirmaredicao">
+                    <button class="btn btn-block  btn-secondary" onclick="cancelaredicao(), esconder(sobrepor),mostrar(rodape)">
+                        CANCELAR
+                    </button>
+                    <button class="btn btn-dark" style="outline: none;"> <h2 style="color: white;"><b>L</b></h2> </button>
+                    <button class="btn btn-block btn-success" onclick="salvaredicao(cor, titulo, anotacao, observacao)">
+                        SALVAR
+                    </button>
+            </div>
+
+            <!--------------------------->
+
+        </div>
+
+        <!-- Menu de exclusão de lembrete !-->
+
+      <div id="confirmarexcluir" class="fix esconde confirmaexclui">
+        <div class="card mb-3 confirmexclui">
+          <div class="card-header" style="text-align: center;">
+              Apagar lembrete?            
+          </div>
+          <div class="card-body" style="text-align: center;">
+            <button class="btn btn-dark" onclick="excluir(0), esconder(confirmarexcluir), mostrar(rodape)">Cancelar</button> <button class="btn btn-danger" onclick="confirmarexclusao()">Apagar</button>
+          </div>
+        </div>
+        
+      </div>
+
+
+
+    <!-- Footer do app !-->
+
+      <div id="rodape" class="footer">
+        <ul class="footeradd">
+          <li class="addalign">
+            <button class="add"><a href="novo.html"><img src="img/svg/plus.png"></a></button>
+          </li>
+        </ul>
+      </div>
+
+    </body>
+</html>
