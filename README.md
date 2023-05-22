@@ -1,11 +1,4 @@
 # Lembrou
-<h4> Projeto em Desenvolvimento... </h4>
-<h3> Futuras Atualizações </h3>
-<ul>
-  <li> Backup local </li>
-  <li> Backup em nuvem </li>
-</ul>
-
 <h2> Descrição </h2>
 <p> Lembrou é um aplicativo de lembretes, podendo adicionar aos lembretes: Titulo, cor e uma breve observação.
 O aplicativo foi desenvolvido com HTML, CSS, Bootstrap e JavaScript, gerando a webview com ApacheCordova e suas dependências listadas em <i><b>Requisitos</b></i></p>
